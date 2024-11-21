@@ -1,0 +1,12 @@
+server:
+  port: 8010
+
+spring:
+  data:
+    mongodb:
+      username: maxlord
+      password: iamblessed
+      host: localhost
+      port: 27017
+      database: personaldetails
+      authentication-database: admin
