@@ -21,5 +21,41 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD=iamblessed
       - ME_CONFIG_MONGODB_SERVER=mongodb
 
+  postgres:
+    image: postgres
+    container_name: postgres-sql
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: maxlord
+      POSTGRES_PASSWORD: iamblessed
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - postgres
+
+
 volumes:
   mongo:
+  postgres:
+  pgadmin:
+
+networks:
+  postgres:
+    driver: bridge
