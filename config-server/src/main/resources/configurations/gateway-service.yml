@@ -1,0 +1,13 @@
+server:
+  port: 8020
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: personal-details-service
+          uri: lb:http://PERSONAL-DETAILS-SERVICE
+          predicates:
+            - Path=/api/v1/personal-details/**
