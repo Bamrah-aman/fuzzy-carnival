@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.grabbingthecode</groupId>
-    <artifactId>PersonalDetailsService</artifactId>
+    <artifactId>personal-details-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>PersonalDetailsService</name>
     <description>PersonalDetailsService</description>
