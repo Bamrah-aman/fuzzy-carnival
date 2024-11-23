@@ -12,6 +12,9 @@
         <module name="gateway-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PersonalDetailsService" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
