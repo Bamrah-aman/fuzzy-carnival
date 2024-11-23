@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("api/v1/personal-details")
-public class demoController {
+public class DemoController {
 
     @GetMapping
     public String demoResponse() {
-        return "GET :: RESPONSE FROM DEMO CONTROLLER INSIDE PERSONAL-DETAILS-SERVICE";
+        return "GET :: IF YOU ARE SEEING THIS MESSAGE WE HAVE SUCCESSFULLY PERSONAL DETAILS SERVICE AUTH SERVICE VIA GATEWAY";
     }
 }
