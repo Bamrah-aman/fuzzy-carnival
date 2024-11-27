@@ -1,7 +1,7 @@
-package com.grabbingthecode.authservice.user.modal;
+package com.grabbingthecode.authservice.user;
 
 import com.grabbingthecode.authservice.enums.Role;
-import com.grabbingthecode.authservice.token.modal.Token;
+import com.grabbingthecode.authservice.token.Token;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
