@@ -1,4 +1,4 @@
-package com.grabbingthecode.authservice.auth;
+package com.grabbingthecode.authservice.securityConfig;
 
 import com.grabbingthecode.authservice.user.UserRepository;
 import lombok.RequiredArgsConstructor;
