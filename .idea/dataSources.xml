@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="Personal Details" uuid="be0dfe80-dd59-4b4f-8454-a33f12043e86">
-      <driver-ref>mongo.4</driver-ref>
+      <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
       <remarks>This database is used for storing personal details</remarks>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
