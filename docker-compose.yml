@@ -33,7 +33,7 @@ services:
     ports:
       - 5432:5432
     networks:
-      - postgres
+      - microservices-net
 
   pgadmin:
     image: dpage/pgadmin4
@@ -48,7 +48,15 @@ services:
     ports:
       - "5050:80"
     networks:
-      - postgres
+      - microservices-net
+
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - microservices-net
 
 
 volumes:
@@ -57,5 +65,5 @@ volumes:
   pgadmin:
 
 networks:
-  postgres:
+  microservices-net:
     driver: bridge
