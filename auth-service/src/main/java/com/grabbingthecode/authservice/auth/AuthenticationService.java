@@ -10,6 +10,7 @@ import com.grabbingthecode.authservice.user.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,6 +22,7 @@ import java.io.IOException;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class AuthenticationService {
 
     private final PasswordEncoder passwordEncoder;
@@ -30,6 +32,7 @@ public class AuthenticationService {
     private final AuthenticationManager authenticationManager;
 
     public AuthenticationResponse register(RegisterRequest request) {
+        log.info("calling the method inside the service layer Auth service");
         var user = User.builder()
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
