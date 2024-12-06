@@ -1,6 +1,5 @@
 package com.grabbingthecode.authservice.securityConfig;
 
-import com.grabbingthecode.authservice.user.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -50,6 +49,7 @@ public class JWTService {
     }
 
     public String extractUserName(String token) {
+        log.info("Extracting the userName: {}", token);
         return extractClaim(token, claims -> claims.getSubject());
     }
 

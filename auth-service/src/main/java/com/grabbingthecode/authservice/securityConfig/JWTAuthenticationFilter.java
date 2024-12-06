@@ -34,7 +34,8 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(@NotNull HttpServletRequest request,
                                     @NotNull HttpServletResponse response,
                                     @NotNull FilterChain filterChain) throws ServletException, IOException {
-        if (request.getServletPath().contains("api/v1/auth")) {
+        if (request.getServletPath().contains("api/v1/auth") ||
+        request.getServletPath().contains("api/v1/gateway-request/validate")) {
             log.info("Accessing the auth path inside if block JwtAuthenticationFilter");
             filterChain.doFilter(request, response);
             return;
